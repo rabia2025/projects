@@ -1,0 +1,437 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    font-family: 'cairo';
+}
+
+body{
+    direction:rtl;
+    background:#f7f7f7;
+    color:#111;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* الهيدر */
+
+header{
+    height:80px;
+    background: linear-gradient(135deg, #141313, #282728, #000000);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 7%;
+}
+
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    background: linear-gradient(90deg, #4285F4, #9B51E0, #D500F9, #FFB74D, #4285F4);
+  background-size: 300% 100%; /* نكبر حجم الخلفية لكي نتمكن من تحريكها */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+  /* إضافة الحركة */
+  animation: gradientMove 15s linear infinite;
+}
+
+/* تعريف الحركة */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+
+
+.icons{
+    display:flex;
+    gap:15px;
+    cursor:pointer;
+}
+
+
+
+/* القسم الرئيسي */
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 8%;
+    color: white;
+    
+    /* الخلفية الجديدة */
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+
+
+.hero-text{
+
+    width:45%;
+
+}
+
+
+.hero-text h1{
+
+    font-size:45px;
+    margin-bottom:20px;
+
+}
+
+
+
+.hero-text p{
+
+    font-size:20px;
+    line-height:2;
+
+}
+
+
+
+button{
+
+    margin-top:25px;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+
+}
+
+
+
+.hero-image img{
+
+    width:350px;
+
+}
+
+
+
+
+/* المنتجات */
+
+.products{
+
+    padding:70px 8%;
+
+    text-align:center;
+
+    background: linear-gradient(135deg, #f1f5b6, #cab7fc, #bbfd2d);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+
+}
+
+.products-1{
+
+    padding:70px 8%;
+
+    text-align:center;
+
+
+    background: linear-gradient(135deg, #dadde9, #b7edfc, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+    
+
+}
+
+
+.products h2{
+
+    font-size:35px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.product-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.card{
+
+    background: linear-gradient(135deg, #e0e0e0, #c9b2bf, #acacac);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.258);
+
+    transition:.3s;
+
+
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.card img{
+
+    width:180px;
+
+    height:220px;
+
+    object-fit:contain;
+
+}
+
+.card video{
+
+    width:180px;
+
+    height:220px;
+
+    object-fit:contain;
+
+}
+
+
+
+.card h3{
+
+    margin:20px 0 10px;
+
+}
+
+
+
+
+/* نموذج الطلب */
+
+.contact{
+
+    background: linear-gradient(135deg, #e0e0e0, #c9b2bf, #acacac);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+
+
+    padding:60px 8%;
+
+    text-align:center;
+
+}
+
+
+
+.contact h2{
+
+    font-size:35px;
+
+    margin-bottom:30px;
+    
+
+}
+
+
+
+form{
+
+    max-width:500px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+
+}
+
+
+
+input, textarea{
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+    box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.258);
+
+}
+
+
+
+textarea{
+
+    height:120px;
+
+}
+
+
+
+form button{
+
+    background:#360423;
+
+    color:white;
+
+}
+
+
+
+
+
+/* الفوتر */
+
+footer{
+
+    background:#000;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.foh{
+    
+    background: linear-gradient(90deg, #4285F4, #9B51E0, #D500F9, #FFB74D, #4285F4);
+  background-size: 300% 100%; /* نكبر حجم الخلفية لكي نتمكن من تحريكها */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+  /* إضافة الحركة */
+  animation: gradientMove 15s linear infinite;
+}
+
+
+
+
+
+/* الجوال */
+
+@media(max-width:768px){
+
+
+header{
+
+    padding:0 20px;
+
+}
+
+
+nav{
+
+    display:none;
+
+}
+
+
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+
+.hero-text{
+
+    width:100%;
+
+}
+
+
+.hero-text h1{
+
+    font-size:32px;
+
+}
+
+
+.hero-image img{
+
+    width:250px;
+
+}
+
+
+.product-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
